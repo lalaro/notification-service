@@ -1,26 +1,52 @@
 {
+  "name": "notification_service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest --detectOpenHandles --forceExit --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lalaro/notification-service.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lalaro/notification-service/issues"
+  },
+  "homepage": "https://github.com/lalaro/notification-service#readme",
+  "engines": {
+    "node": ">=18.0.0 <21.0.0"
+  },
   "dependencies": {
-    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
-    "google-auth-library": "^10.4.2",
-    "jsonwebtoken": "^9.0.2",
-    "mathjs": "^14.5.0",
-    "mongoose": "^8.19.2",
-    "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.19.2"
   },
   "devDependencies": {
     "@shelf/jest-mongodb": "^5.2.2",
-    "@types/mathjs": "^9.4.1",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
     "jest": "^30.2.0",
     "mongodb-memory-server": "^10.2.3",
     "nodemon": "^3.1.10",
-    "supertest": "^7.1.4",
-    "tsx": "^4.19.4",
-    "txs": "^1.0.0"
+    "supertest": "^7.1.4"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "lcov",
+      "text-summary"
+    ],
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "testEnvironment": "node"
   }
 }
