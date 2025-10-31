@@ -44,8 +44,8 @@ app.get('/health', (req, res) => {
 });
  
 // Importar rutas (descomentar cuando las tengas)
-// const notificationRoutes = require('./src/routes/notificationRoutes');
-// app.use('/api/notifications', notificationRoutes);
+const notificationRoutes = require('./src/routes/notificationRoutes');
+app.use('/api/notifications', notificationRoutes);
  
 // Manejo de errores 404
 app.use((req, res) => {
